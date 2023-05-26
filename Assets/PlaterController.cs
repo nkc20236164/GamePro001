@@ -7,7 +7,7 @@ public class PlaterController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Application.targetFrameRate = 1000;
+        Application.targetFrameRate = 1200;
     }
 
     // Update is called once per frame
