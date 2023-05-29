@@ -17,7 +17,8 @@ public class GameDirector : MonoBehaviour
     }
 
 
-    public void DecreaseHp() { 
+    public void DecreaseHp() {
+        this.Time_gauge.GetComponent<Image>().fillAmount -= 0.1f;
     }
 
     // Update is called once per frame
