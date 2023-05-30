@@ -13,20 +13,18 @@ public class GameDirector : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        this.Time_gauge = GameObject.Find("Time");
+        this.Time_gauge = GameObject.Find("Time_gauge");
     }
 
 
-    public void DecreaseHp() {
-        this.Time_gauge.GetComponent<Image>().fillAmount -= 0.1f;
+    public void DecreaseTime() {
     }
 
     // Update is called once per frame
     void Update()
     {
         this.time -= Time.deltaTime;
-        this.Time_gauge.GetComponent<TextMeshProUGUI>().text =
-            this.time.ToString("F1");
+        this.Time_gauge.GetComponent<Image>().fillAmount -= time / 100.0f; 
 
     }
 }
