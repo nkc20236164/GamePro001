@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class PlaterController : MonoBehaviour
 {
+    Animator anime;
     // Start is called before the first frame update
     void Start()
     {
+
+
+        anime = GetComponent<Animator>();
         Application.targetFrameRate = 1200;
     }
 
@@ -24,10 +28,28 @@ public class PlaterController : MonoBehaviour
         if (Input.GetKey(KeyCode.UpArrow))
         {
             transform.Translate(-0.05f, 0, 0);
+            anime.Play("PlayerL");
+
         }
         if (Input.GetKey(KeyCode.DownArrow))
         {
             transform.Translate(0.05f, 0, 0);
+            anime.Play("PlayerR");
+
+        }
+
+        //¶‰EƒL[‚Ì“ü—Íî•ñ‚ğæ“¾
+        float y = Input.GetAxisRaw("Horizontal");
+
+        if (y == 0)
+        {
+            anime.Play("Player");
+        }
+        else if (y == 1)
+        {
+        }
+        else
+        {
         }
 
 

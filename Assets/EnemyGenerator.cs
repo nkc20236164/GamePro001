@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyGenerator : MonoBehaviour
 {
-    public GameObject Enemy_0Prefab;
+    public GameObject enemy;
     float span = 0.7f;
     float delta = 10;
     // Start is called before the first frame update
@@ -20,7 +20,7 @@ public class EnemyGenerator : MonoBehaviour
         if (this.delta > this.span)
         {
             this.delta = 0;
-            GameObject go = Instantiate(Enemy_0Prefab);
+            GameObject go = Instantiate(enemy);
             int px = Random.Range(-6, 6);
             go.transform.position = new Vector3(10, px, 0);
         }
